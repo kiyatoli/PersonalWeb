@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <!--fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@700&family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@1,300&family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@700&family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@1,300&family=Poppins:ital,wght@1,300&family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/transition-style">
+<!--boxicons -->
+<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<!--css-->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/06ef73bdda.js"></script>
+  <title>Register</title>
+</head>
+<body>
+</div>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <ul id="sidemenu">
+          <li><a href="index.html"><i class="fas fa-house"></i></a>Home</li>
+          <li><a href="about.html"><i class="fas fa-blog"></i></a>About</li>
+          <li><a href="Gallery.html"><i class="fas fa-images"></i></a>Gallery</li>
+          <li><a href="blog.html"><i class="fas fa-newspaper"></i></a>Blog</li>
+          <li><a href="contact.html"><i class="fas fa-address-book"></i></a>Contact</li>
+          <li><a href="register.html"><i class="fas fa-user-plus"></i></a>Register</li>
+          <img src="image/logo.png" class="logo">
+          <i class="fas fa-moon" id="darkmode"></i>
+        </ul>
+    </nav>
+    </div>
+  </header>
+  <section id="reg">
+  <div class="reg-body">
+    <h1 class="title-reg">Registration Form</h1>
+    <form class="form-contact" id="registrationForm" onsubmit="validateForm(event)">
+        <div class="input-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+        </div>
+
+        <div class="input-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+        </div>
+
+        <div class="input-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Age" required>
+        </div>
+
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+        <div class="input-group">
+            <label for="confirmPassword">Re-enter Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter Password" required>
+        </div>
+        <div class="input-group">
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" placeholder="Select Sex" required>
+                <option value="" disabled selected>Select Sex</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="region">Region:</label>
+            <select id="region" name="region" placeholder="Select Region" required>
+                <option value="" disabled selected>Select Region</option>
+                <option value="Addis Ababa">Addis Ababa</option>
+                <option value="Dire Dawa">Dire Dawa </option>
+                <option value="Amhara Region">Amhara</option>
+                <option value="Oromia Region">Oromia</option>
+                <option value="Tigray Region">Tigray</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="educationLevel">Education Level:</label>
+            <select id="educationLevel" name="educationLevel" placeholder="Select Education Level" required>
+                <option value="" disabled selected>Select Education Level</option>
+                <option value="doctor">Doctor</option>
+                <option value="master">Master</option>
+                <option value="degree">Degree</option>
+                <option value="degree">Diploma</option>
+                <option value="highschool">High School</option>
+                <option value="Other">Other</option>
+            </select>
+            </div>
+        <div class="input-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" placeholder="Date of Birth" required>
+        </div>
+        <div class="input-group">
+            <label for="nationality">Nationality:</label>
+            <select id="nationality" name="nationality" placeholder="Select Nationality" required>
+                <option value="" disabled selected>Select Nationality</option>
+                <option value="ethiopian">Ethiopian</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+        </div>
+        <div class="input-groups textarea-group">
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Your Comment"></textarea>
+        </div>
+        <div class="error-message" id="errorMessage"></div>
+        <div class="button-div">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</div>
+</section>
+<footer>
+  <div class="containerf">
+    <div class="row">
+      <div class="col">
+        <a href="index.html">
+          <img src="image/logo.png" alt="logo1" class="logo1" />
+        </a>
+        <h1><em>A</em> <span class="auto-types"></span> </h1>
+      </div>
+      <div class="col">
+        <h3>Important links</h3>
+        <ul>
+          <li><a href="https://meu.edu.et/" target="_blank">Mattu University</a></li>
+          <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3Schools</a></li>
+          <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp </a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Navbar</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Register</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="col">
+        <h3>Social Links</h3>
+       
+        <div class="social-icons">
+          <a href="https://www.facebook.com/kiyatoli.abdu.7" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://twitter.com/@kuyatoli" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/kiya_toli/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://t.me/kiyatoli" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+      </div>         
+     </div>
+    </div>
+    </div>
+  </div>
+  <hr>
+  <p class="copyright"> Kiyatoli <i class="fa-solid fa-copyright"></i> 2024- All Right Reserved</p>
+</footer>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  var typed = new Typed(".auto-types",{
+    strings: ["Developer","Programmer","Ui/Ux designer"],
+    typeSpeed: 150,
+    backSpeed: 150,
+    loop:true
+  })
+</script>
+<script>
+  var darkmode = document.getElementById("darkmode");
+  darkmode.onclick = function () {
+    document.body.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")) {
+      darkmode.classList.remove("fa-moon");
+      darkmode.classList.add("fa-sun");
+      darkmode.style.color = "white";
+      // Save dark mode preference in local storage
+      localStorage.setItem("darkMode", "enabled");
+    } else {
+      darkmode.classList.remove("fa-sun");
+      darkmode.classList.add("fa-moon");
+      darkmode.style.color = "";
+      // Save dark mode preference in local storage
+      localStorage.setItem("darkMode", "disabled");
+    }
+  };
+  // Check local storage for dark mode preference on page load
+  document.addEventListener("DOMContentLoaded", function () {
+    var darkModePreference = localStorage.getItem("darkMode");
+    if (darkModePreference === "enabled") {
+      document.body.classList.add("dark-theme");
+      darkmode.classList.remove("fa-moon");
+      darkmode.classList.add("fa-sun");
+      darkmode.style.color = "white";
+    }
+  });
+</script>
+<script>
+  function calculateAge(birthDate) {
+      var currentDate = new Date();
+      var dob = new Date(birthDate);
+      var age = currentDate.getFullYear() - dob.getFullYear();
+
+      // Adjust age based on the month and day
+      if (currentDate.getMonth() < dob.getMonth() || (currentDate.getMonth() === dob.getMonth() && currentDate.getDate() < dob.getDate())) {
+          age--;
+      }
+
+      return age;
+  }
+
+  function validateForm(event) {
+      event.preventDefault();
+
+      var form = document.getElementById('registrationForm');
+      var errorMessage = document.getElementById('errorMessage');
+      var emailInput = document.getElementById('email');
+      var emailValue = emailInput.value;
+
+      // Check if the email contains '@' and '.'
+      if (!emailValue.includes('@') || !emailValue.includes('.')) {
+          errorMessage.textContent = "Please enter a valid email address.";
+          return;
+      }
+      // Check password length
+  var passwordInput = document.getElementById('password');
+  var confirmPasswordInput = document.getElementById('confirmPassword');
+  if (passwordInput.value.length < 8) {
+      errorMessage.textContent = "Password must be at least 8 characters long.";
+      return;
+  }
+
+      // Check password match
+      var passwordInput = document.getElementById('password');
+      var confirmPasswordInput = document.getElementById('confirmPassword');
+      if (passwordInput.value !== confirmPasswordInput.value) {
+          errorMessage.textContent = "Passwords do not match.";
+          return;
+      }
+
+      // Check age
+      var ageInput = document.getElementById('age');
+      var dobInput = document.getElementById('dob');
+      var ageValue = parseInt(ageInput.value);
+      var calculatedAge = calculateAge(dobInput.value);
+
+      if (isNaN(ageValue) || ageValue !== calculatedAge) {
+          errorMessage.textContent = "Age must be equivalent to the date of birth.";
+          return;
+      }
+
+      // Check date of birth
+      var dobValue = new Date(dobInput.value);
+      var currentDate = new Date(); // Today's date
+
+      if (dobValue >= currentDate) {
+          errorMessage.textContent = "Please enter a valid date of birth.";
+          return;
+      }
+
+      // If all validations pass, you can submit the form
+      errorMessage.textContent = "";
+      form.submit();
+  }
+</script>
+</body>
+</html>
