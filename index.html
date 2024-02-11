@@ -32,6 +32,7 @@
   <title>Home</title>
 </head>
 <body>
+  <!--Navigation bar-->
   <header>
     <div class="container">
       <nav class="navbar">
@@ -48,12 +49,14 @@
     </nav>
     </div>
   </header>
+  <!--Hero Section/Home -->
   <div class="hero-back">
            <img src="image/photo1.png" alt="">
           <h3> Hello Meet Kiyatoli Abduljelil </h3>
                  <h1><em>A</em> <span class="auto-type"></span> </h1>
       </div> 
-      <section id="first" class="split-section-home">
+      <!--Short Biography-->
+  <section id="first" class="split-section-home">
         <div class="image-container-home">
          <img src="image/1.jpg" alt="">
         </div>
@@ -61,9 +64,8 @@
           <h1> Short Biography </h1>
           <p> Hey! I'm Kiyatoli, a Computer Science student at Mattu University on a quest for knowledge and personal growth. My academic journey has been quite the ride, unveiling thrilling discoveries in Software Development, Web Development, and Data Science. Outside the lecture halls, catch me immersing myself in Photography, Anime, and Music a feast for my creative soul.<a href="about.html">Read More</a> </p>
         </div>
-      </section>
-<section id="second">
-</section>
+  </section>
+<!--Home page footer -->
 <footer>
   <div class="containerf">
     <div class="row">
@@ -109,7 +111,9 @@
   <hr>
   <p class="copyright"> Kiyatoli <i class="fa-solid fa-copyright"></i> 2024- All Right Reserved</p>
 </footer>
+
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<!--java script for the text animation at Hero/home section-->
 <script>
   var typed = new Typed(".auto-type",{
     strings: ["Computer Science Student","Programmer","Ui/Ux designer","Developer"],
@@ -118,6 +122,7 @@
     loop:true
   })
 </script>
+<!--java script for the text animation at footer section-->
 <script>
   var typed = new Typed(".auto-types",{
     strings: ["Developer","Programmer","Ui/Ux designer"],
@@ -126,6 +131,7 @@
     loop:true
   })
 </script>
+<!-- Blur for header when item go under navigation bar-->
 <script>
   window.addEventListener('scroll', function() {
     var header = document.querySelector('header');
@@ -136,6 +142,7 @@
     }
   });
 </script>
+<!--Dark mode for -->
 <script>
   var darkmode = document.getElementById("darkmode");
 
@@ -143,6 +150,7 @@
     document.body.classList.toggle("dark-theme");
   }
 </script>
+<!--Save dark mode preference in local storage-->
 <script>
   var darkmode = document.getElementById("darkmode");
 
@@ -153,13 +161,12 @@
       darkmode.classList.remove("fa-moon");
       darkmode.classList.add("fa-sun");
       darkmode.style.color = "white";
-      // Save dark mode preference in local storage
+      
       localStorage.setItem("darkMode", "enabled");
     } else {
       darkmode.classList.remove("fa-sun");
       darkmode.classList.add("fa-moon");
       darkmode.style.color = "";
-      // Save dark mode preference in local storage
       localStorage.setItem("darkMode", "disabled");
     }
   };
@@ -174,23 +181,5 @@
     }
   });
 </script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get all navigation items
-    var navItems = document.querySelectorAll('.navbar li');
-
-    // Add click event listener to each navigation item
-    navItems.forEach(function (item) {
-      item.addEventListener('click', function () {
-        // Get the URL from the href attribute of the clicked item
-        var url = item.querySelector('a').getAttribute('href');
-
-        // Navigate to the URL
-        window.location.href = url;
-      });
-    });
-  });
-</script>
-
 </body>
 </html> 

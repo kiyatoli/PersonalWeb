@@ -48,6 +48,7 @@
     </nav>
     </div>
   </header>
+  <!--BIography-->
     <section id="first-about" class="split-section-about">
       <div class="image-container-about">
        <img src="image/about-removebg-preview.png" alt="">
@@ -62,6 +63,7 @@
         </p>
       </div>
     </section>
+    <!--Skill-->
     <section id="second">
       <div class="container-skill">
       <div class="main-title">
@@ -133,6 +135,7 @@
         </section>
       </div>
     </section>
+    <!--Experience-->
     <section id="experience">
       <h1 class="title-ex">Experience</h1>
       <div class="experience-details-container">
@@ -259,6 +262,7 @@
         </div>
       </div>
     </section>
+    <!--Projects-->
     <section> 
       <div id ="projects">
         <div class = "container">
@@ -306,6 +310,7 @@
         </div>
       </div>
     </section>
+
     <footer>
       <div class="containerf">
         <div class="row">
@@ -350,37 +355,35 @@
       <hr>
       <p class="copyright"> Kiyatoli <i class="fa-solid fa-copyright"></i> 2024- All Right Reserved</p>
     </footer>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!--footer text animation same for all footers-->
     <script>
       var typed = new Typed(".auto-types",{
-        strings: ["Developer","Programmer","Ui/Ux designer"],
+        strings: ["Developer","Programmer","Ui/Ux designer","Developer"],
         typeSpeed: 150,
         backSpeed: 150,
         loop:true
       })
     </script>
-
+ <!--Dark mode same for all pages-->
   <script>
     var darkmode = document.getElementById("darkmode");
     darkmode.onclick = function () {
       document.body.classList.toggle("dark-theme");
-  
       if (document.body.classList.contains("dark-theme")) {
         darkmode.classList.remove("fa-moon");
         darkmode.classList.add("fa-sun");
         darkmode.style.color = "white";
-        // Save dark mode preference in local storage
         localStorage.setItem("darkMode", "enabled");
       } else {
         darkmode.classList.remove("fa-sun");
         darkmode.classList.add("fa-moon");
         darkmode.style.color = "";
-        // Save dark mode preference in local storage
         localStorage.setItem("darkMode", "disabled");
       }
     };
   
-    // Check local storage for dark mode preference on page load
     document.addEventListener("DOMContentLoaded", function () {
       var darkModePreference = localStorage.getItem("darkMode");
       if (darkModePreference === "enabled") {

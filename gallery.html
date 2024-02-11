@@ -49,6 +49,7 @@
     </nav>
     </div>
   </header>
+  <!--GAllery Personal picures-->
 <section class="hidden">
   <div class="wrapper">
     <div class="container_gallery">
@@ -56,88 +57,90 @@
      
       <div class="gallery">
         <figure class="card">
-          <img src="Images/1.png" alt="">
+          <img src="images/1.png" alt="">
           <figcaption>image1</figcaption>
         </figure>
         <figure class="card">
-          <img src="Images/1.png" alt="">
+          <img src="images/1.png" alt="">
           <figcaption>image2</figcaption>
         </figure>
         <figure class="card">
-          <img src="Images/1.png" alt="">
+          <img src="images/1.png" alt="">
           <figcaption>image3</figcaption>
         </figure>
         <figure class="card">
-          <img src="Images/1.png" alt="">
+          <img src="images/1.png" alt="">
           <figcaption>image4</figcaption>
         </figure>
         <figure class="card">
-          <img src="Images/1.png" alt="">
+          <img src="images/1.png" alt="">
           <figcaption>image5</figcaption>
         </figure>
         <figure class="card">
-          <img src="Images/1.png" alt="">
+          <img src="images/1.png" alt="">
           <figcaption>image6</figcaption>
         </figure>
         <figure class="card">
-          <img src="Images/1.png" alt="">
+          <img src="images/1.png" alt="">
           <figcaption>image7</figcaption>
         </figure>
         <figure class="card">
-          <img src="Images/5.png" alt="">
+          <img src="images/5.png" alt="">
           <figcaption>image8</figcaption>
         </figure>
         <figure class="card">
-          <img src="Images/2.png" alt="">
+          <img src="images/2.png" alt="">
           <figcaption>image9</figcaption>
         </figure>
       </div>
 </section>
+<!--Family-->
 <section>
 <div class="wrapper">
   <div class="container_gallery">
     <h1>GALLERY</h1>
     <div class="gallery">
       <figure class="card">
-        <img src="Images/1.png" alt="">
+        <img src="images/1.png" alt="">
         <figcaption>image1</figcaption>
       </figure>
       <figure class="card">
-        <img src="Images/1.png" alt="">
+        <img src="images/1.png" alt="">
         <figcaption>image2</figcaption>
       </figure>
       <figure class="card">
-        <img src="Images/1.png" alt="">
+        <img src="images/1.png" alt="">
         <figcaption>image3</figcaption>
       </figure>
       <figure class="card">
-        <img src="Images/1.png" alt="">
+        <img src="images/1.png" alt="">
         <figcaption>image4</figcaption>
       </figure>
       <figure class="card">
-        <img src="Images/1.png" alt="">
+        <img src="images/1.png" alt="">
         <figcaption>image5</figcaption>
       </figure>
       <figure class="card">
-        <img src="Images/1.png" alt="">
+        <img src="images/1.png" alt="">
         <figcaption>image6</figcaption>
       </figure>
       <figure class="card">
-        <img src="Images/1.png" alt="">
+        <img src="images/1.png" alt="">
         <figcaption>image7</figcaption>
       </figure>
       <figure class="card">
-        <img src="Images/5.png" alt="">
+        <img src="images/5.png" alt="">
         <figcaption>image8</figcaption>
       </figure>
       <figure class="card">
-        <img src="Images/2.png" alt="">
+        <img src="images/2.png" alt="">
         <figcaption>image9</figcaption>
       </figure>
     </div>
   </div>
 </div>
 </section>
+<!--Friends-->
 <section>
   <div class="wrapper">
     <div class="container_gallery">
@@ -231,7 +234,7 @@
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script>
     var typed = new Typed(".auto-types",{
-      strings: ["Developer","Programmer","Ui/Ux designer"],
+      strings: ["Developer","Programmer","Ui/Ux designer","Developer"],
       typeSpeed: 150,
       backSpeed: 150,
       loop:true
@@ -247,17 +250,14 @@
       darkmode.classList.remove("fa-moon");
       darkmode.classList.add("fa-sun");
       darkmode.style.color = "white";
-      // Save dark mode preference in local storage
       localStorage.setItem("darkMode", "enabled");
     } else {
       darkmode.classList.remove("fa-sun");
       darkmode.classList.add("fa-moon");
       darkmode.style.color = "";
-      // Save dark mode preference in local storage
       localStorage.setItem("darkMode", "disabled");
     }
   };
-  // Check local storage for dark mode preference on page load
   document.addEventListener("DOMContentLoaded", function () {
     var darkModePreference = localStorage.getItem("darkMode");
     if (darkModePreference === "enabled") {

@@ -49,6 +49,7 @@
     </nav>
     </div>
   </header>
+  <!--Contact form-->
   <main>
     <div class="title-contact">Contact us</div>
     <div class="title-info">Feel Free to Reach Out!</div>
@@ -74,6 +75,7 @@
         </div>
     </form>
 </main>
+<!--Social icons-->
 <div class="social-social">
   <a href="https://github.com/kiyatoli" target="_blank"><img class="social-media-img" src="image/img/social_media/github.svg" alt="GitHub"></a>
   <a href="https://www.instagram.com/kiya_toli/" target="_blank"><img class="social-media-img" src="image/img/social_media/instagram.svg" alt="Instagram"></a>
@@ -131,7 +133,7 @@
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
   var typed = new Typed(".auto-types",{
-    strings: ["Developer","Programmer","Ui/Ux designer"],
+    strings: ["Developer","Programmer","Ui/Ux designer","Developer"],
     typeSpeed: 150,
     backSpeed: 150,
     loop:true
@@ -145,18 +147,18 @@
       darkmode.classList.remove("fa-moon");
       darkmode.classList.add("fa-sun");
       darkmode.style.color = "white";
-      // Save dark mode preference in local storage
+      
       localStorage.setItem("darkMode", "enabled");
     } else {
       darkmode.classList.remove("fa-sun");
       darkmode.classList.add("fa-moon");
       darkmode.style.color = "";
-      // Save dark mode preference in local storage
+     
       localStorage.setItem("darkMode", "disabled");
     }
   };
 
-  // Check local storage for dark mode preference on page load
+  
   document.addEventListener("DOMContentLoaded", function () {
     var darkModePreference = localStorage.getItem("darkMode");
     if (darkModePreference === "enabled") {

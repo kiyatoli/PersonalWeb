@@ -26,6 +26,8 @@ html,body {
   min-height: 100vh; 
   overflow-x: hidden;
 }
+/*Home*/
+
 .container {
   width:75%;
   margin: 0 auto;
@@ -41,16 +43,14 @@ header {
   justify-content: space-between;
   backdrop-filter: blur(5px);
   z-index: 1000;
-  background-color:#5d5c5e38; /* Change the alpha value for transparency */
+  background-color:#5d5c5e38;
 }
 
-/* Add a class for the blurred effect */
 header.blur {
   backdrop-filter: blur(5px);
- /* Change the alpha value for transparency */
 }
 .logo {
-  width: 135px; /* Logo size remains constant */
+  width: 135px; 
   line-height: 25%;
   float: right;
   margin-left: 300px;
@@ -61,7 +61,7 @@ header.blur {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top:0px; /* Navbar dimensions remain constant */
+  margin-top:0px; 
   margin-bottom: 10px;
   margin-left:3px;
   margin-right: 10px;
@@ -76,7 +76,7 @@ header.blur {
   padding: 0;
   margin: 0;
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center; 
   gap: 20px;
 }
 
@@ -87,7 +87,7 @@ header.blur {
   text-align: center;
   color: var(--secondary-color);
   font-weight:400;
-  text-decoration: none; /* Add this line to remove underline */
+  text-decoration: none; 
 }
 .navbar ul li a:hover {
   text-shadow: 1px 1px 2px var(--primary-color), 0 0 25px rgb(216, 18, 18), 0 0 5px rgb(244, 248, 0);
@@ -111,14 +111,14 @@ header.blur {
 }
 .hero-back {
   background: var(--primary-color);
-  padding: 150px; /* Adjusted padding for top and left */
+  padding: 150px; 
   position: relative;
-  text-align: left; /* Align text to the left */
+  text-align: left; 
 }
 .hero-back img {
   float: right;
-  width: 350px; /* Make the image fill the container */
-  height: auto; /* Maintain the image's aspect ratio */
+  width: 350px; 
+  height: auto; 
   margin-right: -70px;
 }
 .hero-back h3 {
@@ -129,9 +129,9 @@ header.blur {
   font-size: 28px;
   font-weight: 400; 
   color: rgb(112, 112, 112);
-  text-shadow: 2px 2px 4px rgba(165, 138, 17, 0.87); /* Add text shadow here */
+  text-shadow: 2px 2px 4px rgba(165, 138, 17, 0.87); 
   font-weight: 1000;
-  font-style: italic; /* or any other appropriate value */
+  font-style: italic; 
 }
 
 .hero-back h1 {
@@ -177,7 +177,7 @@ em {
   font-size: 18px;
   font-weight: 500;
   flex: 60%;
-  padding: 0 20px; /* Optional: Add padding for spacing */
+  padding: 0 20px;
 }
 .text-container-home p a {
  font-size: 20px;
@@ -185,6 +185,7 @@ em {
 .text-container-home p a {
   color: #282d74;
 }
+
 /*ABout */
 #first-about{
   margin: 0;
@@ -205,7 +206,7 @@ em {
 .text-container-about h1 {
   margin-left: 90px;
 }
-/* Additional styling for better appearance */
+
 .split-section-about {
   display: flex;
   align-items: center;
@@ -225,19 +226,19 @@ em {
 }
 .image-container-about {
   flex: 1;
-  margin-right: 70px; /* Space for writing */
+  margin-right: 70px; 
 }
 .image-container-about img {
   width: 100%;
   height: auto;
   border-radius: 10px; 
-  bottom: 0;/* Optional: Add border-radius to the image */
+  bottom: 0;
 }
 .text-container-about {
   flex: 2;
   margin-top: auto;
 }
-/* Additional styling for better appearance */
+
 .text-container-about h1 {
   margin-top: 40px;
   font-size: 2em;
@@ -254,6 +255,7 @@ em {
   background-color: #e0c6f8;
 }
 /* Style the biography section */
+
 .split-section-about {
   display: flex;
   justify-content: space-between;
@@ -262,7 +264,7 @@ em {
   background-color: rgb(220, 241, 241);
 }
 
-/* Optional: Style the text */
+/* Skill Style */
 
 .container-skill{
 	position: relative;
@@ -496,6 +498,7 @@ transform: translateY(-10px);
   font-weight: 700;
 }
 /*Blog*/
+
 .home-blog{
     width: 100%;
     min-height: 440px;
@@ -805,46 +808,47 @@ textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label
     cursor: pointer;
 }
 .social-social {
-  color: #000000; /* Default text color */
+  color: #000000; 
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 20vh;
   width: 75%;
   margin: auto;
-  border-top: 1px solid #fff; /* Default border color */
+  border-top: 1px solid #fff; 
 }
 
 .social-media-img {
   height: 5vh;
-  filter: invert(0); /* Default image filter */
+  filter: invert(0); 
 }
 
 .codecell-img {
   height: 10vh;
-  filter: invert(0); /* Default image filter */
+  filter: invert(0); 
 }
 
-/* Add styles for dark mode */
+/* styles for dark mode */
+
 .dark-theme .social-social {
-  border-top-color: #212121; /* Change border color for dark mode */
-  color: #ffffff; /* Change text color for dark mode */
+  border-top-color: #212121; 
+  color: #ffffff; 
 }
 
 .dark-theme .social-media-img,
 .dark-theme .codecell-img {
-  filter: invert(1); /* Invert image colors for dark mode */
+  filter: invert(1); 
 }
 .social-social img {
-  filter: brightness(0); /* Start with the image as black */
+  filter: brightness(0); 
 }
 
-/* When the background is light, make the image white */
+
 .light .social-social img {
   filter: brightness(1) invert(1);
 }
 
-/* When the background is dark, make the image black */
+
 /* For light mode */
 .social-social img {
   filter: brightness(1) invert(1);
@@ -881,7 +885,7 @@ textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label
   font-weight: bold;
   padding: 5% 0;
   margin-left: 300px;
-  color: #fff; /* Set the color for the title */
+  color: #fff; 
 }
 
 .form-contact {
@@ -903,7 +907,7 @@ select,
 textarea {
   color: inherit;
   width: 100%;
-  background-color: transparent; /* Set background color to transparent */
+  background-color: transparent; 
   border: none;
   border-bottom: 1px solid #752142;
   padding: 1.5%;
@@ -926,14 +930,14 @@ select::placeholder {
 }
 
 .textarea-group {
-  grid-column: span 3; /* Make the textarea span all three columns */
+  grid-column: span 3; 
 }
 
 textarea {
   height: 120px;
   width: 600px;
   resize: none;
-  /* Disable textarea resizing if you want a fixed size */
+ 
 }
 
 .button-div {
@@ -944,7 +948,6 @@ textarea {
 .button-div button {
   padding: 2%;
   width: 48%;
-  /* Adjust the width as needed */
   border: 1px solid;
   border-color: #212121;
   border-radius: 5px;
@@ -969,15 +972,12 @@ textarea {
   background-color: transparent;
 }
 
-/* Set the color for the darkmode selection to white */
-
 input,
 select,
 textarea {
   color: inherit;
   width: 100%;
   background-color: transparent;
-  /* This line ensures that the default background is transparent */
   border: none;
   border-bottom: 1px solid #757575;
   padding: 1.5%;
@@ -992,17 +992,17 @@ textarea:focus {
   outline: transparent;
   border-bottom: 2px solid #69f0ae;
 }
-/* Add these styles for title-reg in light mode */
+
 .title-reg {
-  color: #000; /* Set the color for the title in light mode */
+  color: #000; 
 }
 .dark-theme .title-reg{
   color: white;
 }
-/* Add these styles for select dropdown options in dark mode */
+
 .dark-theme select option {
-  background-color: #424242; /* Set the background color for options in dark mode */
-  color: #fff; /* Set the text color for options in dark mode */
+  background-color: #424242; 
+  color: #fff; 
 }
 
 /* Footer */
@@ -1073,7 +1073,6 @@ footer {
   text-align: center;
   line-height: 30px;
   font-size: 20px;
-  /* Set the color for the social icons in light mode */
   color: var(--secondary-color);
   background: var(--primary-color);
   margin-right: 25px;
@@ -1092,20 +1091,20 @@ footer {
   margin-bottom: -25px;
   text-align: center;
 } 
+
 /* Dark Mode Styles */
+
 body.dark-theme {
   --primary-color: #000106;
   --secondary-color: #fff;
 
-  /* Set the color for the footer in dark mode */
+  
   footer {
     background-color: #212121;
     color: #edf2fc;
   }
 
-  /* Set the color for the social icons in dark mode */
   .social-icons .fa-brands {
-    /* Adjust the color for the social icons in dark mode */
     color: #fff;
     background: #212121;
   }
@@ -1137,24 +1136,22 @@ header.dark-theme {
   background-color: var(--primary-color);
 }
 
-/* Add dark mode styles for other sections as needed */
 
 #darkmode.dark-theme {
-  color: #fff; /* Set the color of the dark mode icon in dark mode */
+  color: #fff; 
 }
 #sidemenu i {
   font-size: 20px;
   color: var(--secondary-color);
-  /* Adjust the color based on your design */
+  
 }
-/* Add more dark mode styles for other elements */
-/* Adjust the positioning of the icons */
+
 #sidemenu li {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom:40px; /* Adjust the spacing between items if needed */
+  margin-bottom:40px; 
 }
 #sidemenu a {
   display: flex;
@@ -1165,9 +1162,9 @@ header.dark-theme {
 }
 #sidemenu img,
 #sidemenu i {
-  margin-bottom: -100px; /* Adjust the spacing between the icon and text */
+  margin-bottom: -100px; 
 }
-/* Adjust the positioning of the icons */
+
 
 /* Gallery */
 .wrapper {
@@ -1241,4 +1238,6 @@ header.dark-theme {
   opacity: 1;
   transform: scale(1.03);
 }  
+
+
 

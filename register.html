@@ -49,6 +49,7 @@
     </nav>
     </div>
   </header>
+  <!--Registration form -->
   <section id="reg">
   <div class="reg-body">
     <h1 class="title-reg">Registration Form</h1>
@@ -188,7 +189,7 @@
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
   var typed = new Typed(".auto-types",{
-    strings: ["Developer","Programmer","Ui/Ux designer"],
+    strings: ["Developer","Programmer","Ui/Ux designer","Developer"],
     typeSpeed: 150,
     backSpeed: 150,
     loop:true
@@ -202,17 +203,17 @@
       darkmode.classList.remove("fa-moon");
       darkmode.classList.add("fa-sun");
       darkmode.style.color = "white";
-      // Save dark mode preference in local storage
+     
       localStorage.setItem("darkMode", "enabled");
     } else {
       darkmode.classList.remove("fa-sun");
       darkmode.classList.add("fa-moon");
       darkmode.style.color = "";
-      // Save dark mode preference in local storage
+    
       localStorage.setItem("darkMode", "disabled");
     }
   };
-  // Check local storage for dark mode preference on page load
+  
   document.addEventListener("DOMContentLoaded", function () {
     var darkModePreference = localStorage.getItem("darkMode");
     if (darkModePreference === "enabled") {
@@ -223,6 +224,9 @@
     }
   });
 </script>
+<!--checks for different kind of input in the recommendations form
+Ex:Age,email has @ and ,password length and match, etc
+-->
 <script>
   function calculateAge(birthDate) {
       var currentDate = new Date();
