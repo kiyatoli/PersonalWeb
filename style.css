@@ -54,7 +54,7 @@ header.blur {
   line-height: 25%;
   float: right;
   margin-left: 300px;
-  margin-top: -100px;
+  margin-top: 10px;
 
 }
 .navbar {
@@ -106,7 +106,7 @@ header.blur {
   font-size: 25px;
   cursor: pointer;
   margin-left:55px;
-  margin-top: -100px;
+  margin-top: 10px;
   
 }
 .hero-back {
@@ -1239,5 +1239,49 @@ header.dark-theme {
   transform: scale(1.03);
 }  
 
+/* Mobile */
+nav .fa-bars {
+  display: none;
+}
+nav .fa-x {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  nav .fa-bars {
+    display: block;
+    font-size: 25px;
+  
+  }
+ #sidemenu .fa-x {
+  display: block;
+  font-size: 25px;
+ }
+ nav ul {
+  background-color:#5d5c5eee;
+  position: fixed;
+  top: 0;
+  left: -700px;
+  width: 700px;
+  height: 100vh;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  transition: left 0.5s;
+ }
+
+ nav ul li {
+  display: block;
+  margin-top: 18px;
+  margin-left: -300px;
+ }
+ #sidemenu .fa-x{
+  left: 60px;
+  position: absolute;
+  top: 28px;
+ }
+
+}
 
 

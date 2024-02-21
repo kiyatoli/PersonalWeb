@@ -36,16 +36,18 @@
   <header>
     <div class="container">
       <nav class="navbar">
-        <ul id="sidemenu">
-          <li><a href="index.html"><i class="fas fa-house"></i></a>Home</li>
+        <i  class="fa-solid fa-bars" onclick="openmenu"></i>
+         <ul id="sidemenu">
+          <i class="fa-solid fa-x" onclick="closemenu()"></i>
+          <li><a href="index.html"><i class="fa-solid fa-house"></i></a>Home</li>
           <li><a href="about.html"><i class="fas fa-blog"></i></a>About</li>
           <li><a href="gallery.html"><i class="fas fa-images"></i></a>Gallery</li>
           <li><a href="blog.html"><i class="fas fa-newspaper"></i></a>Blog</li>
           <li><a href="contact.html"><i class="fas fa-address-book"></i></a>Contact</li>
           <li><a href="register.html"><i class="fas fa-user-plus"></i></a>Register</li>
-          <img src="image/logo.png" class="logo">
-          <i class="fas fa-moon" id="darkmode"></i>
         </ul>
+        <img src="image/logo.png" class="logo">
+          <i class="fas fa-moon" id="darkmode"></i>
     </nav>
     </div>
   </header>
@@ -294,6 +296,25 @@ Ex:Age,email has @ and ,password length and match, etc
       errorMessage.textContent = "";
       form.submit();
   }
+</script>
+<script>
+  var sidemenu = document.getElementById("sidemenu");
+  var menuBtn = document.querySelector(".fa-bars");
+  var closeBtn = document.querySelector(".fa-x");
+
+  function openmenu() {
+    sidemenu.style.left = "0";
+  }
+
+  function closemenu() {
+    sidemenu.style.left = "-700px"; // Adjust the value as needed
+  }
+
+  // Add event listener to open menu button
+  menuBtn.addEventListener("click", openmenu);
+
+  // Add event listener to close menu button
+  closeBtn.addEventListener("click", closemenu);
 </script>
 </body>
 </html>
