@@ -56,26 +56,30 @@
     <div class="title-contact">Contact us</div>
     <div class="title-info">Feel Free to Reach Out!</div>
     <form action="" method="" class="form-contact">
-        <div class="input-group">
-            <input type="text" name="first_name" id="first-name" placeholder="First name">
-            <label for="first-name">First name</label>
-        </div>
-        <div class="input-group">
-            <input type="text" name="last_name" id="last-name" placeholder="Last Name">
-            <label for="last-name">Last name</label>
-        </div>
-        <div class="input-group">
-            <input type="email" name="e-mail" id="e-mail" placeholder="e-mail">
-            <label for="e-mail">e-mail</label>
-        </div>
-        <div class="textarea-group">
-            <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
-            <label for="message">Message</label>
-        </div>
-        <div class="button-div">
-            <button type="submit">Send</button>
-        </div>
+      <div class="input-group">
+        <input type="text" name="first_name" id="first-name" placeholder="First name">
+        <label for="first-name">First name</label>
+        <div class="error-message" id="first-name-error"></div>
+      </div>
+      <div class="input-group">
+        <input type="text" name="last_name" id="last-name" placeholder="Last Name">
+        <label for="last-name">Last name</label>
+        <div class="error-message" id="last-name-error"></div>
+      </div>
+      <div class="input-group">
+        <input type="email" name="e-mail" id="e-mail" placeholder="e-mail">
+        <label for="e-mail">e-mail</label>
+        <div class="error-message" id="email-error"></div>
+      </div>
+      <div class="textarea-group">
+        <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
+        <label for="message">Message</label>
+      </div>
+      <div class="button-div">
+        <button type="submit">Send</button>
+      </div>
     </form>
+    
 </main>
 <!--Social icons-->
 <div class="social-social">
@@ -181,14 +185,58 @@
   }
 
   function closemenu() {
-    sidemenu.style.left = "-700px"; // Adjust the value as needed
+    sidemenu.style.left = "-700px"; 
   }
 
-  // Add event listener to open menu button
+
   menuBtn.addEventListener("click", openmenu);
 
-  // Add event listener to close menu button
+
   closeBtn.addEventListener("click", closemenu);
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var form = document.querySelector(".form-contact");
+    var firstNameInput = document.getElementById("first-name");
+    var lastNameInput = document.getElementById("last-name");
+    var emailInput = document.getElementById("e-mail");
+
+    var nameRegex = /^[a-zA-Z]+$/;
+
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function validateForm(event) {
+      var errors = [];
+
+      if (!nameRegex.test(firstNameInput.value.trim())) {
+        errors.push("First name must contain only letters.");
+        document.getElementById("first-name-error").textContent = "First name must contain only letters.";
+      } else {
+        document.getElementById("first-name-error").textContent = "";
+      }
+
+      if (!nameRegex.test(lastNameInput.value.trim())) {
+        errors.push("Last name must contain only letters.");
+        document.getElementById("last-name-error").textContent = "Last name must contain only letters.";
+      } else {
+        document.getElementById("last-name-error").textContent = "";
+      }
+
+      if (!emailRegex.test(emailInput.value.trim())) {
+        errors.push("Invalid email format.");
+        document.getElementById("email-error").textContent = "Invalid email format.";
+      } else {
+        document.getElementById("email-error").textContent = "";
+      }
+
+      if (errors.length > 0) {
+        event.preventDefault(); 
+      }
+    }
+
+    form.addEventListener("submit", validateForm);
+  });
+</script>
+
 </body>
 </html>

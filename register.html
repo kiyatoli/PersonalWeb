@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/06ef73bdda.js"></script>
   <title>Register</title>
+ 
 </head>
 <body>
 </div>
@@ -226,77 +227,6 @@
     }
   });
 </script>
-<!--checks for different kind of input in the recommendations form
-Ex:Age,email has @ and ,password length and match, etc
--->
-<script>
-  function calculateAge(birthDate) {
-      var currentDate = new Date();
-      var dob = new Date(birthDate);
-      var age = currentDate.getFullYear() - dob.getFullYear();
-
-      // Adjust age based on the month and day
-      if (currentDate.getMonth() < dob.getMonth() || (currentDate.getMonth() === dob.getMonth() && currentDate.getDate() < dob.getDate())) {
-          age--;
-      }
-
-      return age;
-  }
-
-  function validateForm(event) {
-      event.preventDefault();
-
-      var form = document.getElementById('registrationForm');
-      var errorMessage = document.getElementById('errorMessage');
-      var emailInput = document.getElementById('email');
-      var emailValue = emailInput.value;
-
-      // Check if the email contains '@' and '.'
-      if (!emailValue.includes('@') || !emailValue.includes('.')) {
-          errorMessage.textContent = "Please enter a valid email address.";
-          return;
-      }
-      // Check password length
-  var passwordInput = document.getElementById('password');
-  var confirmPasswordInput = document.getElementById('confirmPassword');
-  if (passwordInput.value.length < 8) {
-      errorMessage.textContent = "Password must be at least 8 characters long.";
-      return;
-  }
-
-      // Check password match
-      var passwordInput = document.getElementById('password');
-      var confirmPasswordInput = document.getElementById('confirmPassword');
-      if (passwordInput.value !== confirmPasswordInput.value) {
-          errorMessage.textContent = "Passwords do not match.";
-          return;
-      }
-
-      // Check age
-      var ageInput = document.getElementById('age');
-      var dobInput = document.getElementById('dob');
-      var ageValue = parseInt(ageInput.value);
-      var calculatedAge = calculateAge(dobInput.value);
-
-      if (isNaN(ageValue) || ageValue !== calculatedAge) {
-          errorMessage.textContent = "Age must be equivalent to the date of birth.";
-          return;
-      }
-
-      // Check date of birth
-      var dobValue = new Date(dobInput.value);
-      var currentDate = new Date(); // Today's date
-
-      if (dobValue >= currentDate) {
-          errorMessage.textContent = "Please enter a valid date of birth.";
-          return;
-      }
-
-      // If all validations pass, you can submit the form
-      errorMessage.textContent = "";
-      form.submit();
-  }
-</script>
 <script>
   var sidemenu = document.getElementById("sidemenu");
   var menuBtn = document.querySelector(".fa-bars");
@@ -307,14 +237,85 @@ Ex:Age,email has @ and ,password length and match, etc
   }
 
   function closemenu() {
-    sidemenu.style.left = "-700px"; // Adjust the value as needed
+    sidemenu.style.left = "-700px"; 
   }
 
-  // Add event listener to open menu button
   menuBtn.addEventListener("click", openmenu);
-
-  // Add event listener to close menu button
   closeBtn.addEventListener("click", closemenu);
 </script>
+<script>
+  function validateForm(event) {
+    event.preventDefault();
+
+    var firstNameInput = document.getElementById("firstName");
+    var lastNameInput = document.getElementById("lastName");
+    var ageInput = document.getElementById("age");
+    var dobInput = document.getElementById("dob");
+    var passwordInput = document.getElementById("password");
+    var confirmPasswordInput = document.getElementById("confirmPassword");
+    var emailInput = document.getElementById("email");
+    var phoneInput = document.getElementById("phone");
+
+    var nameRegex = /^[a-zA-Z]+$/;
+    var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    var emailRegex = /\S+@\S+\.\S+/;
+    var phoneRegex = /^\+?\d+$/;
+
+    
+    var errorMessage = document.getElementById("errorMessage");
+    errorMessage.innerHTML = ""; 
+
+    if (!nameRegex.test(firstNameInput.value)) {
+      errorMessage.innerHTML = "First name should only contain letters.";
+      return;
+    }
+
+    if (!nameRegex.test(lastNameInput.value)) {
+      errorMessage.innerHTML = "Last name should only contain letters.";
+      return;
+    }
+
+    if (ageInput.value !== calculateAge(new Date(dobInput.value))) {
+      errorMessage.innerHTML = "Age must be equivalent to date of birth.";
+      return;
+    }
+
+    if (!passwordRegex.test(passwordInput.value)) {
+      errorMessage.innerHTML = "Password must be at least 8 characters long and contain at least one letter and one digit.";
+      return;
+    }
+
+    if (passwordInput.value !== confirmPasswordInput.value) {
+      errorMessage.innerHTML = "Passwords do not match.";
+      return;
+    }
+
+    if (!emailRegex.test(emailInput.value)) {
+      errorMessage.innerHTML = "Email is invalid.";
+      return;
+    }
+
+    if (!phoneRegex.test(phoneInput.value)) {
+      errorMessage.innerHTML = "Phone number should only contain numbers and +.";
+      return;
+    }
+
+   
+    document.getElementById("registrationForm").submit();
+  }
+
+  
+  function calculateAge(dob) {
+    var today = new Date();
+    var age = today.getFullYear() - dob.getFullYear();
+    var monthDiff = today.getMonth() - dob.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+      age--;
+    }
+    return age.toString();
+  }
+</script>
+
+
 </body>
 </html>
