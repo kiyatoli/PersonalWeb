@@ -59,12 +59,12 @@
     <form class="form-contact" id="registrationForm" onsubmit="validateForm(event)">
         <div class="input-group">
             <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" maxlength="50" required>
         </div>
 
         <div class="input-group">
             <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" maxlength="50" required>
         </div>
 
         <div class="input-group">
@@ -74,11 +74,11 @@
 
         <div class="input-group">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="password" name="password" placeholder="Password" maxlength="50" required>
         </div>
         <div class="input-group">
             <label for="confirmPassword">Re-enter Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter Password" required>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter Password" maxlength="50" required>
         </div>
         <div class="input-group">
             <label for="sex">Sex:</label>
@@ -126,11 +126,11 @@
         </div>
         <div class="input-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="email" id="email" name="email" placeholder="Email" maxlength="50" required>
         </div>
         <div class="input-group">
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" maxlength="20" required>
         </div>
         <div class="input-groups textarea-group">
             <label for="comment">Comment:</label>
