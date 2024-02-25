@@ -1383,12 +1383,19 @@ margin-left: 110px;
 }
 
 .input-group {
-  margin-left: -70px;
+  margin-left: -120px;
   margin-bottom: 15px;
 }
 
 .button-div {
   flex-direction: column;
+}
+.input-group input {
+  width: 250px;
+}
+.textarea-group textarea {
+  width: 290px;
+  height: 200px;
 }
 input,
 select,
@@ -1397,7 +1404,7 @@ textarea {
   padding: 15px;
 }
 .textarea-group {
-  margin-left: -100px;
+  margin-left: -150px;
 }
 .button-div {
   flex-direction: column;
