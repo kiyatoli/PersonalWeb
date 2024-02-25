@@ -394,6 +394,7 @@ em {
 	background-color: #d03645;
 }
 /*project*/
+
 /* EXPERIENCE SECTION */
 
 #experience {
@@ -1343,9 +1344,67 @@ margin-left: -80px;
   flex: 1; 
   padding: 20px;
 }
-.col-skill {
+/*Gallery*/
+.card figcaption {
+  opacity: 1;
+  transform: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+}
+.container_gallery h1 {
+ font-size: 30px;
+}
+.gallery1 {
+  margin-top: -100px;
+}
+.card {
+  width: 48%;
+  margin-right: 2%;
+}
+.card img {
+   height: 250px;
+   width: 205px;
+}
+/*Reg*/
+.form-contact {
+  
+  display: flex;
   flex-direction: column;
 }
+
+.input-group {
+  margin-left: -70px;
+  margin-bottom: 15px;
+}
+
+.button-div {
+  flex-direction: column;
+}
+input,
+select,
+textarea {
+  font-size: 16px;
+  padding: 15px;
+}
+.textarea-group {
+  margin-left: -100px;
+}
+.button-div {
+  flex-direction: column;
+}
+.button-div button {
+  width: 100%;
+  margin-left: -50px;
+  padding: 10px;
+    font-size: 18px;
+}
+
+
 /*footer*/
   footer {
     font-size: 20px;
@@ -1356,13 +1415,12 @@ margin-left: -80px;
   }
  
   .col {
-   
     width: 100%;
     margin-bottom: 30px;
     text-align: center;
   }
   .col h3 {
-   margin-left: 60px;
+   margin-left: 50px;
   }
   .social-icons {
   font-size: 80px;
