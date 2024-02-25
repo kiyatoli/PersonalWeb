@@ -107,6 +107,7 @@ header.blur {
   cursor: pointer;
   margin-left:55px;
   margin-top: 10px;
+  cursor: pointer;
   
 }
 .hero-back {
@@ -132,8 +133,9 @@ header.blur {
   text-shadow: 2px 2px 4px rgba(165, 138, 17, 0.87); 
   font-weight: 1000;
   font-style: italic; 
-}
+  white-space: nowrap;
 
+}
 .hero-back h1 {
   font-family: 'Poppins', sans-serif;
   margin-left: 15px;
@@ -1276,7 +1278,6 @@ nav .fa-x {
   z-index: 2;
   transition: left 0.5s;
  }
-
  nav ul li {
   display: block;
   margin-top: 18px;
@@ -1287,6 +1288,86 @@ nav .fa-x {
   position: absolute;
   top: 28px;
  }
+ #darkmode {
+  font-size: 30px;
+  
+ }
+ /*home*/
+.logo {
+  width:180px;
+  margin-left: 60px;
+}
+.hero-back img {
+  width: 270px;
+  margin-left: -20px;
+}
+.hero-back h3 {
+color: rgb(145, 137, 137);
+ margin-top: 300px;
+ font-size: 20px;
+ margin-bottom: 20px;
+margin-left: -80px;
+
+}
+.hero-back h1 {
+  margin-left: -120px;
+  font-size:35px;
+}
+.split-section-home {
+  flex: none;
+  display: block;
+}
+.image-container-home img {
+  width:450px
+}
+.text-container-home {
+  margin-bottom: 50px;
+}
+.text-container-home h1{
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+.text-container-home a {
+  color: #099dff;
+}
+/*About*/
+.split-section-about {
+  flex: none;
+  display: block;
+}
+.image-container-about img {
+  display: none;
+}
+.text-container-about {
+  margin-top: 50px;
+  flex: 1; 
+  padding: 20px;
+}
+.col-skill {
+  flex-direction: column;
+}
+/*footer*/
+  footer {
+    font-size: 20px;
+    align-content: center;
+  }
+  .row {
+    flex-direction: column;
+  }
+ 
+  .col {
+   
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .col h3 {
+   margin-left: 60px;
+  }
+  .social-icons {
+  font-size: 80px;
+  margin-left: 50px;
+}
 
 }
 
