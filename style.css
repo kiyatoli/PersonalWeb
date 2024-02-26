@@ -559,7 +559,7 @@ transform: translateY(-10px);
   background-color:rgb(187, 187, 187);
 }
 .adven h1 {
- font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #000000;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -1344,6 +1344,33 @@ margin-left: -80px;
   flex: 1; 
   padding: 20px;
 }
+.experience-details-container {
+  height: 120vh;
+}
+.article-container {
+  width: 100%;
+  display: block;
+}
+.experience-sub-title {
+  margin-left: -90px;
+}
+/*BLog*/
+.home-title {
+  margin-top: -50px;
+}
+.about {
+  display: block;
+}
+
+.about .contentBx {
+
+}
+
+.about .imgBx {
+  max-width: 50%;
+  width: 50%;
+}
+
 /*Gallery*/
 .card figcaption {
   opacity: 1;
